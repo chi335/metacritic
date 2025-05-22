@@ -53,8 +53,9 @@ yaml
 ```bash
 git clone https://github.com/yourusername/game-review-website.git
 cd game-review-website
-
 ---
+
+
 ## 🛠️ 백엔드 설정
 
 1. MySQL 데이터베이스를 생성합니다.
