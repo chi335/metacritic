@@ -118,7 +118,7 @@ const App = () => {
 export default App;
 ```
 
-##index.js
+## index.js
 ```bash
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -133,7 +133,7 @@ root.render(
 );
 ```
 
-##App.css
+## App.css
 ```bash
 body {
   margin: 0;
@@ -185,7 +185,7 @@ a:hover {
 }
 ```
 
-##🎨 Components
+## 🎨 Components
 ---
 ##Header Component
 ###Header.jsx
@@ -211,7 +211,7 @@ function Header() {
 export default Header;
 ```
 
-###Header.css
+### Header.css
 
 ```bash
 .site-header {
@@ -237,9 +237,9 @@ export default Header;
 .register-button:hover { background-color: #e0a800; }
 ```
 
-##GameCard Component
+## GameCard Component
 ---
-###GameCard.jsx
+### GameCard.jsx
 
 ```bash
 import React from 'react';
@@ -273,7 +273,7 @@ function GameCard({ game }) {
 export default GameCard;
 ```
 
-###GameCard.css
+### GameCard.css
 ```bash
 .game-card {
   background-color: #2a2a2a;
@@ -354,9 +354,9 @@ function ReviewForm({ gameId }) {
 export default ReviewForm;
 ```
 
-##ReviewList Component
+## ReviewList Component
 ---
-###ReviewList.jsx
+### ReviewList.jsx
 
 ```bash
 import React, { useEffect, useState } from 'react';
@@ -385,11 +385,11 @@ function ReviewList({ gameId }) {
 
 export default ReviewList;
 ```
-##📄 Pages
+## 📄 Pages
 ---
-###Home Page
+### Home Page
 
-###Home.jsx
+### Home.jsx
 ```bash
 import React, { useEffect, useState } from 'react';
 import GameCard from '../../components/GameCard/GameCard';
