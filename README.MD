@@ -46,32 +46,7 @@ yaml
 
 ---
 
-## 🚀 설치 방법
 
-### 1. 리포지토리 클론
 
-```bash
-git clone https://github.com/yourusername/game-review-website.git
-cd game-review-website
-2. 백엔드 설정
-MySQL 데이터베이스 생성
 
-backend/db/schema.sql 파일에 정의된 SQL 명령어 실행 (테이블 생성)
 
-backend/config/db_connect.php 파일에서 데이터베이스 연결 정보 수정
-
-php
-복사
-편집
-// 예시
-$host = "localhost";
-$user = "your_username";
-$pass = "your_password";
-$dbname = "your_database";
-3. 프론트엔드 설정
-bash
-복사
-편집
-cd frontend
-npm install
-npm start
