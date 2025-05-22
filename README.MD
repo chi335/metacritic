@@ -9,23 +9,14 @@
 project-root/
 
 ├── frontend/ # React 프론트엔드 코드
-
 │ ├── src/
-
 │ │ ├── components/ # 재사용 가능한 UI 컴포넌트
-
 │ │ ├── pages/ # 페이지 단위 컴포넌트
-
 │ │ └── ...
-
 │ └── public/ # 정적 파일
-
 └── backend/ # PHP 백엔드 코드
-
 ├── api/ # RESTful API 엔드포인트
-
 ├── config/ # 데이터베이스 및 설정 파일
-
 └── db/ # 데이터베이스 스키마 및 연결 설정
 
 yaml
