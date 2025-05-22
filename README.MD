@@ -46,6 +46,47 @@ yaml
 
 ---
 
+## ⚙️ 설치 방법
+
+### 1. 리포지토리 클론
+
+```bash
+git clone https://github.com/yourusername/game-review-website.git
+cd game-review-website
+
+---
+## 🛠️ 백엔드 설정
+
+1. MySQL 데이터베이스를 생성합니다.
+
+2. `backend/db/schema.sql` 파일에 포함된 SQL 명령어를 실행하여 필요한 테이블을 생성합니다.
+
+3. `backend/config/db_connect.php` 파일에서 데이터베이스 연결 정보를 본인의 환경에 맞게 설정합니다.
+   - 호스트, 데이터베이스 이름, 사용자명, 비밀번호 등을 수정해야 합니다.
+
+## 💻 프론트엔드 설정
+
+1. 프론트엔드 디렉토리로 이동합니다.
+
+```bash
+cd frontend
+npm install
+npm start
+
+```markdown
+## 🔌 API 엔드포인트
+
+| 메서드 | 엔드포인트 | 설명 |
+|--------|------------|------|
+| GET    | `/api/get_games.php`               | 모든 게임 목록 조회 |
+| GET    | `/api/get_game.php?id=<id>`        | 특정 게임 정보 조회 |
+| POST   | `/api/add_review.php`              | 리뷰 추가 |
+| GET    | `/api/get_reviews.php?game_id=<id>`| 특정 게임의 리뷰 조회 |
+| POST   | `/api/signup_manual.php`           | 일반 회원가입 |
+| POST   | `/api/signup_email.php`            | 이메일 인증 회원가입 |
+
+
+
 
 
 
