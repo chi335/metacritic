@@ -44,9 +44,23 @@ yaml
 - PHP
 - MySQL
 
+---
 
+## ⚙️ 설치 방법
 
+### 1. 리포지토리 클론
 
+###git clone https://github.com/yourusername/game-review-website.git
+###cd game-review-website
+
+##백엔드 설정
+##MySQL 데이터베이스를 생성합니다.
+
+###backend/db/schema.sql 파일에 포함된 SQL 명령어를 실행하여 필요한 테이블을 생성합니다.
+
+###backend/config/db_connect.php 파일에서 데이터베이스 연결 정보를 본인의 환경에 맞게 설정합니다.
+
+###호스트, 데이터베이스 이름, 사용자명, 비밀번호 등을 수정해야 합니다.
 
 
 
