@@ -50,9 +50,9 @@ yaml
 
 ### 1. 리포지토리 클론
 
-bash
+---bash
 git clone https://github.com/yourusername/game-review-website.git
-cd game-review-website
+cd game-review-website---
 
 
 
@@ -72,9 +72,9 @@ cd game-review-website
 ```bash
 cd frontend
 npm install
-npm start
+npm start---
 
-```markdown
+
 ## 🔌 API 엔드포인트
 
 | 메서드 | 엔드포인트 | 설명 |
