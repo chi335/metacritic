@@ -43,7 +43,7 @@ cd game-review-website
 ```
 
 
-2. 백엔드 설정
+###2. 백엔드 설정
 
 
 MySQL 데이터베이스 생성
@@ -53,7 +53,7 @@ backend/db/schema.sql 파일의 SQL 명령어로 테이블 생성
 backend/config/db_connect.php에서 데이터베이스 연결 정보 설정
 
 
-3. 프론트엔드 설정
+###3. 프론트엔드 설정
 
 ```bash
 cd frontend
