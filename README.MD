@@ -52,7 +52,7 @@ yaml
 
 ```bash
 git clone https://github.com/yourusername/game-review-website.git
-cd game-review-website
+cd game-review-website'''
 
 
 
