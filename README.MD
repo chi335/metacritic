@@ -79,6 +79,41 @@ This repository contains the source code for GameReview Hub, a React application
 
 ##📋 Table of Contents
 ```bashCore Files```
+
 ```bashComponents```
+
 ```bash Pages```
 
+# 🧩 Core Files
+---
+## APP.js
+```bash
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+
+import Home from './pages/Home/Home';
+import GameList from './pages/GameList/GameList';
+import GameDetail from './pages/GameDetail/GameDetail';
+import Login from './pages/Login/Login';
+import Signup from './pages/Signup/Signup';
+
+import Header from './components/Header/Header';
+
+const App = () => {
+  return (
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/games" element={<GameList />} />
+        <Route path="/games/:id" element={<GameDetail />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="*" element={<div>페이지를 찾을 수 없습니다.</div>} />
+      </Routes>
+    </>
+  );
+};
+
+export default App;
+```
