@@ -48,10 +48,10 @@ yaml
 
 ## ⚙️ 설치 방법
 
-### 1. 리포지토리 클론
+***### 1. 리포지토리 클론
 
 git clone https://github.com/yourusername/game-review-website.git
-cd game-review-website
+cd game-review-website***
 
 백엔드 설정
 MySQL 데이터베이스를 생성합니다.
