@@ -57,4 +57,4 @@ cd frontend
 npm install
 npm start```
 
-
+### 3 ```bash.htaccess``` 파일로 라우팅 설정
