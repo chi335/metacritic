@@ -49,7 +49,7 @@ yaml
 ## ⚙️ 설치 방법
 
 ### 1. 리포지토리 클론
-
+'''
 ```bash
 git clone https://github.com/yourusername/game-review-website.git
 cd game-review-website'''
