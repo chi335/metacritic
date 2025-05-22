@@ -59,3 +59,16 @@ npm start
 ```
 
 ### 3 ```bash.htaccess``` 파일로 라우팅 설정
+
+
+## 🔌 API 엔드포인트
+
+| 메서드 | 엔드포인트 | 설명 |
+|--------|------------|------|
+| GET    | `/api/get_games.php`               | 모든 게임 목록 조회 |
+| GET    | `/api/get_game.php?id=<id>`        | 특정 게임 정보 조회 |
+| POST   | `/api/add_review.php`              | 리뷰 추가 |
+| GET    | `/api/get_reviews.php?game_id=<id>`| 특정 게임의 리뷰 조회 |
+| POST   | `/api/signup_manual.php`           | 일반 회원가입 |
+| POST   | `/api/signup_email.php`            | 이메일 인증 회원가입 |
+
