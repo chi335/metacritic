@@ -74,7 +74,11 @@ npm start
 ```bashGETPOST /api/signup_email.php``` - 이메일 인증 회원가입
 
 
+# 🎮 GameReview Hub - React Application
+This repository contains the source code for GameReview Hub, a React application for browsing and reviewing games.
 
-
-
+##📋 Table of Contents
+```bashCore Files
+```bashComponents
+```bashPages
 
