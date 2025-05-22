@@ -64,7 +64,7 @@ npm start
 ## 🔌 API 엔드포인트
 
 
-|--------|------------|------|
+
 | GET    | `/api/get_games.php`               | 모든 게임 목록 조회 |
 | GET    | `/api/get_game.php?id=<id>`        | 특정 게임 정보 조회 |
 | POST   | `/api/add_review.php`              | 리뷰 추가 |
