@@ -33,27 +33,23 @@ yaml
 
 ---
 
-## 🛠️ 기술 스택
+## 📦 설치 방법
 
-### 프론트엔드
-- React
-- React Router
-- CSS
-
-### 백엔드
-- PHP
-- MySQL
-
----
 ### 1. 리포지토리 클론
 
+```bash
+git clone https://github.com/yourusername/game-review-website.git
+cd game-review-website
+---
 
-✅ **고친 포인트:**
-- 코드 블록 시작: ```` ```bash ````
-- 마지막 줄 `cd game-review-website` **다음 줄에 백틱 3개로 정확히 닫음** → ` ``` `
-- 코드 블록 **전후 줄 바꿈 추가**로 마크다운 해석 오류 방지
 
-이렇게 수정하면 코드 블록은 정확히 끝나고, **뒤에 오는 마크다운 섹션에 전혀 영향을 주지 않게** 됩니다. `README.md`에 그대로 붙여 넣으셔도 문제 없습니다!
+2. 백엔드 설정
+MySQL 데이터베이스 생성
+
+backend/db/schema.sql 파일의 SQL 명령어로 테이블 생성
+
+backend/config/db_connect.php에서 데이터베이스 연결 정보 설정
+
 
 
 
