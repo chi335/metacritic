@@ -740,9 +740,9 @@ function Login() {
 export default Login;
 ```
 
-##Signup Page
+## Signup Page
 ---
-###Signup.jsx
+### Signup.jsx
 
 ```bash
 import React, { useState } from 'react';
