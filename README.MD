@@ -31,6 +31,18 @@ project-root/
 
 ---
 
+## 기술스택
+---
+- React
+- React Router
+- Css
+
+## 백엔드
+- PHP
+- MySQL
+
+---
+
 ## 📦 설치 방법
 
 ### 1. 리포지토리 클론
