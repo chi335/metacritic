@@ -14,10 +14,10 @@ project-root/
 │ │ ├── pages/
 │ │ └── ...
 │ └── public/
-└── backend/ # PHP 백엔드 코드
-├── api/ # API 엔드포인트
-├── config/ # 설정 파일
-└── db/ # 데이터베이스 관련
+└── backend/       # PHP 백엔드 코드
+├── api/           # API 엔드포인트
+├── config/        # 설정 파일
+└── db/            # 데이터베이스 관련
 ```
 
 ---
@@ -33,6 +33,8 @@ project-root/
 
 ## 기술스택
 ---
+### 프론트엔드
+
 - React
 - React Router
 - Css
