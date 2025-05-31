@@ -187,8 +187,8 @@ a:hover {
 
 ## 🎨 Components
 ---
-##Header Component
-###Header.jsx
+## Header Component
+### Header.jsx
 
 ```bash
 import React from 'react';
