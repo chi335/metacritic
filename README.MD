@@ -91,7 +91,7 @@ npm start
 # 🎮 GameReview Hub - React Application
 This repository contains the source code for GameReview Hub, a React application for browsing and reviewing games.
 
-##📋 Table of Contents
+## 📋 Table of Contents
 ```bashCore Files```
 
 ```bashComponents```
