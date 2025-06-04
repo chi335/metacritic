@@ -69,7 +69,7 @@ npm install
 npm start
 ```
 
-### 3 ```bash.htaccess``` 파일로 라우팅 설정
+### 3 ```.htaccess``` 파일로 라우팅 설정
 
 
 ## 🔌 API 엔드포인트
