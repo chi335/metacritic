@@ -1188,4 +1188,7 @@ RewriteRule ^ index.html [QSA,L]
         }
     ]
 }
+
 ```
+### 더자세한 내용은 아래 주소 참조
+https://github.com/couque0319
