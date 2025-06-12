@@ -397,13 +397,12 @@ $stmt = $pdo->prepare("SELECT * FROM game_reviews WHERE game_id = ? ORDER BY cre
 $stmt->execute([$game_id]);
 
 echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
-```
-
-### api/get_reviews_by_user.php
-```
-
 ```php
 
+### api/get_reviews_by_user.php
+---
+
+```php
 <?php
 require_once '../db_connect.php';
 header('Content-Type: application/json');
@@ -425,8 +424,8 @@ $stmt = $pdo->prepare("
 $stmt->execute([$nickname]);
 
 echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
-
 ```
+
 
 ### api/get_users.php
 ---
