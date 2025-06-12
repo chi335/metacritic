@@ -283,7 +283,7 @@ echo json_encode(['success' => $success]);
 ```
 
 ### api/delete_review.php
-```
+---
 
 ```php
 <?php
