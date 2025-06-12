@@ -51,10 +51,11 @@ RESTful API 설계
 
 ## ⚙️ 설치 방법
 ### 📥 리포지토리 클론
-'''bash
+```php
 git clone https://github.com/couque0319/reactproject.git
 cd reactproject
-'''
+```
+
 ## 🛠️ 프론트엔드 설정
 '''bash
 cd frontend
