@@ -223,7 +223,7 @@ if ($httpCode === 200 && isset($result['candidates'][0]['content']['parts'][0]['
 ### api/check_username.php
 ---
 
-'''bash
+```php
 <?php
 require_once 'db_connect.php';
 header('Content-Type: application/json');
@@ -240,7 +240,7 @@ $stmt->execute([$username]);
 
 $exists = $stmt->fetch() !== false;
 echo json_encode(['exists' => $exists]);
-'''
+```
 
 ### api/db.php
 ---
