@@ -159,7 +159,7 @@ echo json_encode(['success' => $success]);
 ### api/ask_ai.php
 ---
 
-'''bash
+```php
 <?php
 // 에러 출력 설정
 ini_set('display_errors', 1);
@@ -217,7 +217,8 @@ if ($httpCode === 200 && isset($result['candidates'][0]['content']['parts'][0]['
     'raw' => $response // 필요 시 제거 가능
   ]);
 }
-'''
+
+```
 
 ### api/check_username.php
 ---
