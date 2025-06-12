@@ -5,7 +5,7 @@
 
 ## 📁 프로젝트 구조
 
-
+```php
 reactproject/
 
 ├── frontend/       # React 기반 프론트엔드
@@ -19,7 +19,7 @@ reactproject/
 │   ├── api/        # API 엔드포인트 (게임/유저/리뷰 처리)
 │   ├── db_connect.php    # DB 연결
 │   └── static/     # 정적 CSS 리소스
-
+```
 ## ✨ 주요 기능
 ---
 - 🔍 게임 목록 조회
@@ -722,7 +722,9 @@ try {
 
 ## 🗄️ 데이터베이스 스키마 (db/schema.sql)
 ---
+
 ### games 테이블
+```php
 CREATE TABLE `games` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
@@ -734,7 +736,7 @@ CREATE TABLE `games` (
   PRIMARY KEY (`id`),
   KEY `title` (`title`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
+```
 
 ### game_reviews 테이블
 ---
@@ -798,33 +800,19 @@ CREATE TABLE `users` (
 ---
 frontend/
 ├── copy-to-xampp.js
-
 ├── package.json
-
 ├── package-lock.json
-
 ├── .env
-
 ├── .gitignore
-
 ├── README.md
-
 ├── build/
-
 │   ├── index.html
-
 │   ├── favicon.ico
-
 │   ├── manifest.json
-
 │   ├── robots.txt
-
 │   └── static/
-
 │       ├── css/
-
 │       └── js/
-
 ├── node_modules/
 
 ## 📌 주요 설명
