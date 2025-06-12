@@ -154,6 +154,7 @@ $success = $stmt->execute([$game_id, $nickname, $rating, $content]);
 
 echo json_encode(['success' => $success]);
 ?>
+'''
 
 ### api/ask_ai.php
 ---
