@@ -676,7 +676,7 @@ for ($page = 1; $page <= $totalPages; $page++) {
 
 echo "<br>🎉 전체 완료!";
 ?>
-'''
+```
 
 ### api/update_user_role.php
 ---
