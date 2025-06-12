@@ -403,6 +403,7 @@ echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
 ```
 
 ```php
+
 <?php
 require_once '../db_connect.php';
 header('Content-Type: application/json');
@@ -424,6 +425,7 @@ $stmt = $pdo->prepare("
 $stmt->execute([$nickname]);
 
 echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
+
 ```
 
 ### api/get_users.php
