@@ -125,10 +125,11 @@ backend/
 - api/ : 게임, 유저, 리뷰 관련 API 핸들러
 - static/css/ : 정적 CSS 리소스
 
-```bash
 ## 🧩 PHP API 코드
 
 ### api/add_review.php
+---
+
 ```bash
 <?php
 require_once '../db_connect.php';
