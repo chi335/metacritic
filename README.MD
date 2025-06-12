@@ -129,6 +129,7 @@ backend/
 ## 🧩 PHP API 코드
 
 ### api/add_review.php
+```bash
 <?php
 require_once '../db_connect.php';
 header('Content-Type: application/json');
