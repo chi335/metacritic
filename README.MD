@@ -245,7 +245,7 @@ echo json_encode(['exists' => $exists]);
 ### api/db.php
 ---
 
-'''bash
+```php
 <?php
 $host = 'localhost';
 $user = 'root';
@@ -258,12 +258,12 @@ if ($conn->connect_error) {
     die(json_encode(['success' => false, 'message' => 'DB 연결 실패: ' . $conn->connect_error]));
 }
 ?>
-'''
+```
 
 ### api/delete_game.php
 ---
 
-'''bash
+```php
 <?php
 require_once 'db_connect.php';
 header('Content-Type: application/json');
@@ -283,9 +283,9 @@ echo json_encode(['success' => $success]);
 '''
 
 ### api/delete_review.php
----
+```
 
-'''bash
+```php
 <?php
 session_start();
 require_once '../db_connect.php';
@@ -304,12 +304,12 @@ $stmt = $pdo->prepare("DELETE FROM game_reviews WHERE id = ? AND nickname = ?");
 $success = $stmt->execute([$review_id, $nickname]);
 
 echo json_encode(['success' => $success]);
-'''
+```
 
 ### api/get_game.php
 ---
 
-'''bash
+```php
 <?php
 require_once(__DIR__ . '/../db_connect.php');
 header('Content-Type: application/json');
@@ -331,12 +331,12 @@ if ($game) {
 } else {
   echo json_encode(["error" => "게임을 찾을 수 없습니다."]);
 }
-'''
+```
 
 ### api/get_games.php
 ---
 
-'''bash
+```php
 <?php
 // 에러 표시 설정 (개발환경용)
 ini_set('display_errors', 1);
@@ -372,12 +372,12 @@ try {
         'error' => 'DB 오류: ' . $e->getMessage()
     ]);
 }
-'''
+```
 
 ### api/get_reviews.php
 ---
 
-'''bash
+```php
 <?php
 require_once '../db_connect.php';
 header('Content-Type: application/json');
@@ -396,9 +396,9 @@ echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
 '''
 
 ### api/get_reviews_by_user.php
----
+```
 
-'''bash
+```php
 <?php
 require_once '../db_connect.php';
 header('Content-Type: application/json');
@@ -420,10 +420,12 @@ $stmt = $pdo->prepare("
 $stmt->execute([$nickname]);
 
 echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
-'''
+```
 
 ### api/get_users.php
-''' bash
+---
+
+```php
 <?php
 require_once '../db_connect.php';
 header('Content-Type: application/json');
@@ -433,12 +435,12 @@ $stmt->execute();
 
 $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 echo json_encode($users);
-'''
+```
 
 ### api/login.php
 ---
 
-'''bash
+```php
 <?php
 require_once '../db_connect.php';
 header('Content-Type: application/json');
@@ -468,22 +470,22 @@ if ($user && password_verify($password, $user['password'])) {
 } else {
   echo json_encode(['success' => false, 'message' => '아이디 또는 비밀번호가 틀렸습니다.']);
 }
-'''
+```
 
 ### api/logout.php
 ---
 
-'''bash
+```
 <?php
 session_start();
 session_destroy();
 echo json_encode(['success' => true]);
-'''
+```
 
 ### api/register.php
 ---
 
-'''bash
+```php
 <?php
 require_once '../db_connect.php';
 header('Content-Type: application/json');
@@ -513,12 +515,12 @@ $stmt = $pdo->prepare("INSERT INTO users (username, password, nickname, role) VA
 $success = $stmt->execute([$username, $hashed, $nickname]);
 
 echo json_encode(['success' => $success]);
-'''
+```
 
 ### api/session_status.php
 ---
 
-'''bash
+```php
 <?php
 session_start();
 header('Content-Type: application/json');
@@ -533,12 +535,12 @@ if (isset($_SESSION['username'])) {
 } else {
   echo json_encode(['loggedIn' => false]);
 }
-'''
+```
 
 ### api/signup_manual.php
 ---
 
-'''bash
+```php
 <?php
 require_once __DIR__ . '/../db_connect.php';
 header('Content-Type: application/json; charset=utf-8');
@@ -594,9 +596,12 @@ $success = $stmt->execute([$email, $username, $hashed]);
 
 echo json_encode(['success' => $success]);
 ?>
-'''
+```
 
 ### api/update_games.php
+---
+
+```php
 <?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -676,7 +681,7 @@ echo "<br>🎉 전체 완료!";
 ### api/update_user_role.php
 ---
 
-'''bash
+```php
 <?php
 require_once '../db_connect.php';
 header('Content-Type: application/json');
@@ -713,7 +718,7 @@ try {
     'message' => '쿼리 오류: ' . $e->getMessage()
   ]);
 }
-'''
+```
 
 ## 🗄️ 데이터베이스 스키마 (db/schema.sql)
 ---
@@ -734,7 +739,7 @@ CREATE TABLE `games` (
 ### game_reviews 테이블
 ---
 
-'''bash
+```php
 CREATE TABLE `game_reviews` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `game_id` int(11) NOT NULL,
@@ -745,12 +750,12 @@ CREATE TABLE `game_reviews` (
   PRIMARY KEY (`id`),
   KEY `game_id` (`game_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-'''
+```
 
 ### users 테이블
 ---
 
-'''bash
+```php
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(100) NOT NULL,
@@ -762,7 +767,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-'''
+```
 
 ### tasks.json
 
@@ -833,7 +838,7 @@ frontend/
 ### src/components/AIBar/AIBar.jsx
 ---
 
-'''bash
+```php
 import React, { useState } from 'react';
 import './AIBar.css';
 
@@ -899,12 +904,12 @@ function AIBar() {
 }
 
 export default AIBar;
-'''
+```
 
 ### src/components/Auth/AuthModal.jsx
 ---
 
-'''bash
+```php
 // src/components/Auth/AuthModal.jsx
 import React, { useState } from 'react';
 import LoginForm from './LoginForm';
@@ -937,12 +942,12 @@ function AuthModal({ onClose }) {
 }
 
 export default AuthModal;
-'''
+```
 
 ### src/components/Auth/LoginForm.jsx
 ---
 
-'''bash
+```php
 import React, { useState } from 'react';
 
 function LoginForm({ onClose }) {
@@ -1006,11 +1011,11 @@ function LoginForm({ onClose }) {
 }
 
 export default LoginForm;
-'''
+```
 
 ### src/components/Auth/SignupForm.jsx
 
-'''bash
+```php
 // SignupForm.jsx
 import React, { useState } from 'react';
 
@@ -1079,12 +1084,12 @@ function SignupForm({ onClose }) {
 }
 
 export default SignupForm;
-'''
+```
 
 ### src/components/GameCard/GameCard.jsx
 ---
 
-'''bash
+```php
 // GameCard.jsx
 import React from 'react';
 import './GameCard.css';
@@ -1131,12 +1136,12 @@ function GameCard({ game }) {
 }
 
 export default GameCard;
-'''
+```
 
 ### src/components/Header/Header.jsx
 ---
 
-'''bash
+```php
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
@@ -1199,12 +1204,12 @@ function Header({ onLoginClick }) {
 }
 
 export default Header;
-'''
+```
 
 ### src/components/Review/ReviewForm.jsx
 ---
 
-'''bash
+```php
 // ReviewForm.jsx
 import React, { useEffect, useState } from 'react';
 import './ReviewForm.css';
@@ -1278,12 +1283,12 @@ function ReviewForm({ gameId, onReviewAdded }) {
 }
 
 export default ReviewForm;
-'''
+```
 
 ### src/components/Review/ReviewList.jsx
 ---
 
-'''bash
+```php
 // ReviewList.jsx
 import React, { useEffect, useState } from 'react';
 import './ReviewList.css';
@@ -1357,12 +1362,12 @@ function ReviewList({ gameId }) {
 }
 
 export default ReviewList;
-'''
+```
 
 ### src/pages/Admin/Admin.jsx
 ---
 
-'''bash
+```php
 // src/pages/Admin.jsx
 import React, { useEffect, useState } from 'react';
 
@@ -1424,12 +1429,12 @@ function Admin() {
 }
 
 export default Admin;
-'''
+```
 
 ### src/pages/Admin/AdminPanel.jsx
 ---
 
-'''bash
+```php
 import React, { useEffect, useState } from 'react';
 import './AdminPanel.css';
 
@@ -1569,12 +1574,12 @@ function AdminPanel() {
 }
 
 export default AdminPanel;
-'''
+```
 
 ### src/pages/GameDetail/GameDetail.jsx
 ---
 
-'''bash
+```php
 // src/pages/GameDetail/GameDetail.jsx
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
@@ -1627,12 +1632,12 @@ function GameDetail() {
 }
 
 export default GameDetail;
-'''
+```
 
 ### src/pages/GameList/GameList.jsx
 ---
 
-'''bash
+```php
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './GameList.css';
@@ -1686,12 +1691,12 @@ function GameList() {
 }
 
 export default GameList;
-'''
+```
 
 ### src/pages/Home/Home.jsx
 ---
 
-'''bash
+```php
 // src/pages/Home/Home.jsx
 import React, { useEffect, useState } from 'react';
 import GameCard from '../../components/GameCard/GameCard';
@@ -1724,12 +1729,12 @@ function Home() {
 }
 
 export default Home;
-'''
+```
 
 ### src/pages/Profile/Profile.jsx
 ---
 
-'''bash
+```php
 // Profile.jsx
 import React, { useEffect, useState } from 'react';
 import './Profile.css';
@@ -1797,4 +1802,4 @@ function Profile() {
 }
 
 export default Profile;
-'''
+```
