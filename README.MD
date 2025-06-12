@@ -153,8 +153,8 @@ $stmt = $pdo->prepare("INSERT INTO game_reviews (game_id, nickname, rating, cont
 $success = $stmt->execute([$game_id, $nickname, $rating, $content]);
 
 echo json_encode(['success' => $success]);
-```
----
+?>
+
 ### api/ask_ai.php
 ---
 
