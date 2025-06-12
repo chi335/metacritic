@@ -9,25 +9,15 @@
 reactproject/
 
 ├── frontend/       # React 기반 프론트엔드
-
 │   ├── src/
-
 │   │   ├── components/   # 재사용 가능한 UI 컴포넌트
-
 │   │   ├── pages/        # 페이지별 라우팅 구성
-
 │   │   └── App.jsx       # 메인 컴포넌트
-
 │   ├── public/           # 정적 리소스
-
 │   └── build/            # 빌드 결과물
-
 ├── backend/        # PHP 기반 백엔드
-
 │   ├── api/        # API 엔드포인트 (게임/유저/리뷰 처리)
-
 │   ├── db_connect.php    # DB 연결
-
 │   └── static/     # 정적 CSS 리소스
 
 ## ✨ 주요 기능
@@ -105,51 +95,28 @@ React 기반 게임 리뷰 프로젝트의 **백엔드(PHP API)**입니다.
 ## 디렉토리구조
 backend/
 ├── .htaccess
-
 ├── db_connect.php
-
 ├── index.html
-
 ├── api/
-
 │   ├── add_review.php
-
 │   ├── ask_ai.php
-
 │   ├── check_username.php
-
 │   ├── db.php
-
 │   ├── delete_game.php
-
 │   ├── delete_review.php
-
 │   ├── get_game.php
-
 │   ├── get_games.php
-
 │   ├── get_reviews.php
-
 │   ├── get_reviews_by_user.php
-
 │   ├── get_users.php
-
 │   ├── login.php
-
 │   ├── logout.php
-
 │   ├── register.php
-
 │   ├── session_status.php
-
 │   ├── signup_manual.php
-
 │   ├── update_games.php
-
 │   ├── update_user_role.php
-
 ├── static/
-
 │   └── css/
 
 ## 📌 주요 설명
@@ -158,7 +125,7 @@ backend/
 - api/ : 게임, 유저, 리뷰 관련 API 핸들러
 - static/css/ : 정적 CSS 리소스
 
-'''bash
+```bash
 ## 🧩 PHP API 코드
 
 ### api/add_review.php
@@ -184,7 +151,7 @@ $stmt = $pdo->prepare("INSERT INTO game_reviews (game_id, nickname, rating, cont
 $success = $stmt->execute([$game_id, $nickname, $rating, $content]);
 
 echo json_encode(['success' => $success]);
-'''
+```
 ---
 ### api/ask_ai.php
 '''bash
