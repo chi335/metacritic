@@ -280,7 +280,7 @@ $stmt = $pdo->prepare("DELETE FROM games WHERE id = ?");
 $success = $stmt->execute([$id]);
 
 echo json_encode(['success' => $success]);
-'''
+```
 
 ### api/delete_review.php
 ```
