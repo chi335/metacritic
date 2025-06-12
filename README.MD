@@ -393,7 +393,7 @@ $stmt = $pdo->prepare("SELECT * FROM game_reviews WHERE game_id = ? ORDER BY cre
 $stmt->execute([$game_id]);
 
 echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
-'''
+```
 
 ### api/get_reviews_by_user.php
 ```
