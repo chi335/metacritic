@@ -797,7 +797,7 @@ CREATE TABLE `users` (
         }
     ]
 }
-```php
+```
 ---
 
 ## 📦 Frontend - reactproject
