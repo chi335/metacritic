@@ -155,6 +155,8 @@ echo json_encode(['success' => $success]);
 ```
 ---
 ### api/ask_ai.php
+---
+
 '''bash
 <?php
 // 에러 출력 설정
@@ -216,6 +218,8 @@ if ($httpCode === 200 && isset($result['candidates'][0]['content']['parts'][0]['
 '''
 
 ### api/check_username.php
+---
+
 '''bash
 <?php
 require_once 'db_connect.php';
@@ -236,6 +240,8 @@ echo json_encode(['exists' => $exists]);
 '''
 
 ### api/db.php
+---
+
 '''bash
 <?php
 $host = 'localhost';
@@ -252,6 +258,8 @@ if ($conn->connect_error) {
 '''
 
 ### api/delete_game.php
+---
+
 '''bash
 <?php
 require_once 'db_connect.php';
@@ -272,6 +280,8 @@ echo json_encode(['success' => $success]);
 '''
 
 ### api/delete_review.php
+---
+
 '''bash
 <?php
 session_start();
@@ -294,6 +304,8 @@ echo json_encode(['success' => $success]);
 '''
 
 ### api/get_game.php
+---
+
 '''bash
 <?php
 require_once(__DIR__ . '/../db_connect.php');
@@ -317,6 +329,9 @@ if ($game) {
   echo json_encode(["error" => "게임을 찾을 수 없습니다."]);
 }
 '''
+
+### api/get_games.php
+---
 
 '''bash
 <?php
@@ -357,6 +372,8 @@ try {
 '''
 
 ### api/get_reviews.php
+---
+
 '''bash
 <?php
 require_once '../db_connect.php';
@@ -376,6 +393,8 @@ echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
 '''
 
 ### api/get_reviews_by_user.php
+---
+
 '''bash
 <?php
 require_once '../db_connect.php';
@@ -414,6 +433,8 @@ echo json_encode($users);
 '''
 
 ### api/login.php
+---
+
 '''bash
 <?php
 require_once '../db_connect.php';
@@ -447,6 +468,8 @@ if ($user && password_verify($password, $user['password'])) {
 '''
 
 ### api/logout.php
+---
+
 '''bash
 <?php
 session_start();
@@ -455,6 +478,8 @@ echo json_encode(['success' => true]);
 '''
 
 ### api/register.php
+---
+
 '''bash
 <?php
 require_once '../db_connect.php';
@@ -488,6 +513,8 @@ echo json_encode(['success' => $success]);
 '''
 
 ### api/session_status.php
+---
+
 '''bash
 <?php
 session_start();
@@ -506,6 +533,8 @@ if (isset($_SESSION['username'])) {
 '''
 
 ### api/signup_manual.php
+---
+
 '''bash
 <?php
 require_once __DIR__ . '/../db_connect.php';
@@ -642,6 +671,8 @@ echo "<br>🎉 전체 완료!";
 '''
 
 ### api/update_user_role.php
+---
+
 '''bash
 <?php
 require_once '../db_connect.php';
@@ -698,6 +729,8 @@ CREATE TABLE `games` (
 
 
 ### game_reviews 테이블
+---
+
 '''bash
 CREATE TABLE `game_reviews` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -712,6 +745,8 @@ CREATE TABLE `game_reviews` (
 '''
 
 ### users 테이블
+---
+
 '''bash
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -793,6 +828,8 @@ frontend/
 ## 🧩 JSX 파일 코드
 ---
 ### src/components/AIBar/AIBar.jsx
+---
+
 '''bash
 import React, { useState } from 'react';
 import './AIBar.css';
@@ -862,6 +899,8 @@ export default AIBar;
 '''
 
 ### src/components/Auth/AuthModal.jsx
+---
+
 '''bash
 // src/components/Auth/AuthModal.jsx
 import React, { useState } from 'react';
@@ -898,6 +937,8 @@ export default AuthModal;
 '''
 
 ### src/components/Auth/LoginForm.jsx
+---
+
 '''bash
 import React, { useState } from 'react';
 
@@ -966,7 +1007,7 @@ export default LoginForm;
 
 ### src/components/Auth/SignupForm.jsx
 
-'''
+'''bash
 // SignupForm.jsx
 import React, { useState } from 'react';
 
@@ -1038,6 +1079,8 @@ export default SignupForm;
 '''
 
 ### src/components/GameCard/GameCard.jsx
+---
+
 '''bash
 // GameCard.jsx
 import React from 'react';
@@ -1088,6 +1131,8 @@ export default GameCard;
 '''
 
 ### src/components/Header/Header.jsx
+---
+
 '''bash
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -1154,6 +1199,8 @@ export default Header;
 '''
 
 ### src/components/Review/ReviewForm.jsx
+---
+
 '''bash
 // ReviewForm.jsx
 import React, { useEffect, useState } from 'react';
@@ -1229,7 +1276,10 @@ function ReviewForm({ gameId, onReviewAdded }) {
 
 export default ReviewForm;
 '''
+
 ### src/components/Review/ReviewList.jsx
+---
+
 '''bash
 // ReviewList.jsx
 import React, { useEffect, useState } from 'react';
@@ -1307,6 +1357,8 @@ export default ReviewList;
 '''
 
 ### src/pages/Admin/Admin.jsx
+---
+
 '''bash
 // src/pages/Admin.jsx
 import React, { useEffect, useState } from 'react';
@@ -1372,6 +1424,8 @@ export default Admin;
 '''
 
 ### src/pages/Admin/AdminPanel.jsx
+---
+
 '''bash
 import React, { useEffect, useState } from 'react';
 import './AdminPanel.css';
@@ -1515,6 +1569,8 @@ export default AdminPanel;
 '''
 
 ### src/pages/GameDetail/GameDetail.jsx
+---
+
 '''bash
 // src/pages/GameDetail/GameDetail.jsx
 import React, { useEffect, useState } from 'react';
@@ -1571,6 +1627,8 @@ export default GameDetail;
 '''
 
 ### src/pages/GameList/GameList.jsx
+---
+
 '''bash
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -1628,6 +1686,8 @@ export default GameList;
 '''
 
 ### src/pages/Home/Home.jsx
+---
+
 '''bash
 // src/pages/Home/Home.jsx
 import React, { useEffect, useState } from 'react';
@@ -1664,6 +1724,8 @@ export default Home;
 '''
 
 ### src/pages/Profile/Profile.jsx
+---
+
 '''bash
 // Profile.jsx
 import React, { useEffect, useState } from 'react';
