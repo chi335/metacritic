@@ -93,6 +93,8 @@ api key (삭제 예정)
 React 기반 게임 리뷰 프로젝트의 **백엔드(PHP API)**입니다.
 
 ## 디렉토리구조
+
+```php
 backend/
 ├── .htaccess
 ├── db_connect.php
@@ -118,6 +120,7 @@ backend/
 │   ├── update_user_role.php
 ├── static/
 │   └── css/
+```
 
 ## 📌 주요 설명
 ---
@@ -773,6 +776,7 @@ CREATE TABLE `users` (
 
 ### tasks.json
 
+```php
 {
     "version": "2.0.0",
     "tasks" : [
@@ -791,12 +795,16 @@ CREATE TABLE `users` (
         }
     ]
 }
+```php
+---
 
 ## 📦 Frontend - reactproject
 ---
 ### React 기반 게임 리뷰 프로젝트의 프론트엔드입니다.
 
 ## 📁 디렉토리 구조
+
+```php
 ---
 frontend/
 ├── copy-to-xampp.js
@@ -814,6 +822,8 @@ frontend/
 │       ├── css/
 │       └── js/
 ├── node_modules/
+```
+
 
 ## 📌 주요 설명
 - package.json : 프로젝트 의존성과 실행 스크립트 정의
